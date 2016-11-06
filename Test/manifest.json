@@ -1,0 +1,37 @@
+{
+	"manifest_version":2,
+
+	"name":"Insta-Share",
+	
+	"description":"Instant Sharing on Instagram",
+	
+	"version":"1.2.1",
+
+	"page_action": {
+		"default_icon":"icon.png",
+		"default_title":"Insta-Share",
+		"default_popup":"popup.html"
+	},
+
+	"background":{
+		"scripts":["eventPage.js"],
+		"persistent":false
+	},
+
+	"content_scripts":[
+		{
+			"matches":["http://instagram.com/*", "https://instagram.com/*", "https://www.instagram.com/*"],
+
+			"js":["urlizer.js","jquery-1.10.2.js", "jquery.dataTables.js"],
+			"css":["urlizer.css"]
+		}
+	],
+
+	"permissions":[
+		"tabs",
+		"http://instagram.com/*",
+		"https://instagram.com/*"
+	]
+
+		
+}
