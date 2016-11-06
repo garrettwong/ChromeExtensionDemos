@@ -1,16 +1,22 @@
 {
 	"manifest_version":2,
 
-	"name":"Garrett Bookmark Manager",
+	"name":"G Bookmark Manager",
 	
 	"description":"Bookmark Management",
 	
-	"version":"1.0.1",
+	"version":"1.0.0",
 
 	"page_action": {
-		"default_icon":"img/icon.png",
+		"default_icon":"icon.png",
 		"default_title":"Bookmark Manager",
 		"default_popup":"chrome-popdown/chrome-popdown.html"
+	},
+	
+
+	"background":{
+		"scripts":["eventHandler.js"],
+		"persistent":false
 	},
 
 	"content_scripts":[
@@ -18,10 +24,10 @@
 			"matches":[ "http://*/*", "https://*/*" ],
 
 			"js":[
-				"replacerjoe.js", 
-				"eventHandler.js",
+				"node_modules/jquery/dist/jquery.min.js",
 
-				"node_modules/jquery/dist/jquery.min.js"
+				"wordreplacer.js", 
+				"eventHandler.js"
 			],
 
 			"css":[
