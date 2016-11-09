@@ -1,16 +1,16 @@
 {
 	"manifest_version":2,
 
-	"name":"Insta-Share",
+	"name":"G.Utils",
 	
-	"description":"Instant Sharing on Instagram",
+	"description":"G.Utils for quick surfing",
 	
 	"version":"1.2.1",
 
 	"page_action": {
 		"default_icon":"icon.png",
-		"default_title":"Insta-Share",
-		"default_popup":"popup.html"
+		"default_title":"G.Utils Management Panel",
+		"default_popup":"chrome-popdown/chrome-popdown.html"
 	},
 
 	"background":{
@@ -20,17 +20,30 @@
 
 	"content_scripts":[
 		{
-			"matches":["http://instagram.com/*", "https://instagram.com/*", "https://www.instagram.com/*"],
+			"matches":[
+				"http://*/*", 
+				"https://*/*" 
+			],
 
-			"js":["urlizer.js","jquery-1.10.2.js", "jquery.dataTables.js"],
-			"css":["urlizer.css"]
+			"js":[
+				"node_modules/jquery/dist/jquery.min.js",
+				
+				"settlers.js",
+				"urlizer.js",
+				"wordreplacer.js"
+			],
+
+			"css":[
+				//"node_modules/bootstrap/dist/css/bootstrap.min.css",
+				//"node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css"				
+			]
 		}
 	],
 
 	"permissions":[
 		"tabs",
-		"http://instagram.com/*",
-		"https://instagram.com/*"
+		"http://*/*",
+		"https://*/*"
 	]
 
 		
