@@ -10,7 +10,7 @@ var DEFAULT_A2_TT = '03:30';
 var DEFAULT_A2_AMPM = 1;
 var DEFAULT_RATE = 1.0;
 var DEFAULT_VOLUME = 1.0;
-var DEFAULT_PHRASE = 'It\'s $TIME, so get up!';
+var DEFAULT_PHRASE = 'The current time is $TIME!';
 var DEFAULT_SOUND = 'ringing';
 
 var audio = null;
