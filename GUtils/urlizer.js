@@ -3,8 +3,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     // console.log(request, sender, sendResponse);
     // console.log($('.-cx-PRIVATE-Photo__placeholder img'));
 
-	console.log('request received');
-
 	var videos = $('video');
 	$.each(videos, function(idx, video) {
 		console.log('VIDEO URL: ', $(video).attr('src'));
@@ -22,6 +20,18 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 	//console.log(srcList);
 	
+
+	// Main Entry Point
+	console.log(window.settlers);
+	switch(request.action) {
+		case 'allHyperlinks':
+		break;
+		case '':
+		break;
+		default:
+		break;
+	}
+
 	if (request.action === 'allHyperlinks') {
 		document.write(arrayToHTMLString(srcList));	
 	} else {

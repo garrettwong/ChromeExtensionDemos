@@ -1,0 +1,50 @@
+{
+	"manifest_version":2,
+
+	"name":"G.Utils",
+	
+	"description":"G.Utils for quick surfing",
+	
+	"version":"1.2.1",
+
+	"page_action": {
+		"default_icon":"icon.png",
+		"default_title":"G.Utils Management Panel",
+		"default_popup":"chrome-popdown/chrome-popdown.html"
+	},
+
+	"background":{
+		"scripts":["eventPage.js"],
+		"persistent":false
+	},
+
+	"content_scripts":[
+		{
+			"matches":[
+				"http://*/*", 
+				"https://*/*" 
+			],
+
+			"js":[
+				"node_modules/jquery/dist/jquery.min.js",
+				
+				"settlers.js",
+				"urlizer.js",
+				"wordreplacer.js"
+			],
+
+			"css":[
+				//"node_modules/bootstrap/dist/css/bootstrap.min.css",
+				//"node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css"				
+			]
+		}
+	],
+
+	"permissions":[
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	]
+
+		
+}

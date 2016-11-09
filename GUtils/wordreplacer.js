@@ -1,3 +1,19 @@
+window.replacements = [
+	{
+		toReplace: /\byanghong49\b/g,
+		replaceWith: 'My Butt'
+	},
+	{
+		toReplace: /\wesbc\b/g,
+		replaceWith: 'My Butt'
+	},
+	{
+		toReplace: /\yeee\b/g,
+		replaceWith: 'My Butt'
+	},
+]
+
+
 walk(document.body);
 
 function walk(node) {
@@ -32,13 +48,10 @@ function walk(node) {
 
 function handleText(textNode) {
 	var v = textNode.nodeValue;
-	console.log(v);
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
-	v = v.replace(/\bwesbc\b/g, "my butt");
+	for (var i = 0; i < replacements.length; i++) {
+		v = v.replace(replacements[i].toReplace, replacements[i].replaceWith);
+	}
 
 	textNode.nodeValue = v;
 }
