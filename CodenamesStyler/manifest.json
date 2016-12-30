@@ -1,0 +1,30 @@
+{
+	"manifest_version":2,
+
+	"name":"Codenames.css",
+	
+	"description":"http://www.horsepaste.com",
+	
+	"version":"1.2.1",
+
+	"content_scripts":[
+		{
+    		"matches": [
+				"http://www.horsepaste.com/*",
+				"http://www.horsepaste.com/"
+			],
+
+			"css":[
+				"codenames.css"
+			]
+		}
+	],
+
+	"permissions":[
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	]
+
+		
+}

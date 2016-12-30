@@ -1,0 +1,63 @@
+body {
+	background:#ababab url("http://img.frbiz.com/nimg/a7/07/a2b7790240af81c62915662fa79e-600x600-0/grey_wood_artificial_marble_slab_countertop_vanity_top_flooring_tiles_solid_surface_for_kitchen_bathroom.jpg") no-repeat fixed center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#game-view {
+	width: 1000px !important;
+}
+#button-line {
+	background: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #222;
+}
+#status-line #status {
+    font-size: 35px;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#end-turn-button {
+	border: 2px solid #111;
+}
+
+div.cell {    
+	background: rgb(155, 122, 88);
+	border: 2px solid #ba9292;
+	box-shadow: 3px 4px 3px #ba9292;
+	border-radius: 4px;
+	width: 150px !important;
+}
+div.cell .word {
+	background: white;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+.blue.revealed {
+    color: #222 !important;
+}
+.red.revealed {
+    color: #222 !important;
+}
+.codemaster .cell.blue.hidden {
+	background: #4183CC;
+}
+.codemaster .cell.red.hidden {
+	background: #D13030;
+}
+.codemaster .cell.black.hidden {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+	background: #4c4c4c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+
+}
