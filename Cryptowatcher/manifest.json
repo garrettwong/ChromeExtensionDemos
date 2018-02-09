@@ -1,0 +1,49 @@
+{
+	"manifest_version":2,
+
+	"name":"Cryptowatcher",
+	
+	"description":"Cryptowatcher",
+	
+	"version":"0.0.1",
+
+	"page_action": {
+		"default_icon":"icon.png",
+		"default_title":"Cryptowatcher",
+		"default_popup":"cryptowatcher-popup/cryptowatcher-popup.html"
+	},
+
+	"background": {
+		"scripts":["eventPage.js"],
+		"persistent":false
+	},
+
+	"content_scripts":[
+		{
+			"matches":[
+				"http://*/*", 
+				"https://*/*" 
+			],
+
+			"js":[
+				"jquery.min.js",
+				
+				"settlers.js",
+				"urlizer.js",
+				"wordreplacer.js"
+			],
+
+			"css":[
+				
+			]
+		}
+	],
+
+	"permissions":[
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	]
+
+		
+}

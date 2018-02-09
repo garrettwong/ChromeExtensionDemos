@@ -1,0 +1,21 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    min-width: 400px;
+}
+input {
+    border-radius: 6px;
+    padding: 4px;
+}
+input:hover {
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+ul > li{
+    margin: 4px;
+}
